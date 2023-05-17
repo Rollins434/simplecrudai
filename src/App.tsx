@@ -16,12 +16,12 @@ function App() {
 
   return (
     <>
-      <div className="px-8 py-4 shadow-md
+      <div className="px-8 
 
-bg-blue-50 text-4xl font-sans font-semibold ">Contact Page</div>
+ text-2xl bg-white-100 py-2 shadow-lg  text-black text-center ">Contact Page</div>
       <div className="flex ">
         <div
-          className={`bg-zinc-200 sidebar   p-5 pt-8 ${
+          className={`bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)]  border-#ccc-1px sidebar   p-5 pt-8 ${
             open ? "w-72" : "w-20"
           } duration-300 relative`}
         >
@@ -65,7 +65,7 @@ bg-blue-50 text-4xl font-sans font-semibold ">Contact Page</div>
             </ul>
           </div>
         </div>
-        <div className="pt-8 px-4 flex-1 ">
+        <div className="pt-8 px-4 flex-1 bg-zinc-100">
           <QueryClientProvider client={client}>
 
           <Routes>
