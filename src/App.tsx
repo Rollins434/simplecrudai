@@ -18,7 +18,7 @@ function App() {
     <>
       <div className="px-8 
 
- text-2xl bg-white-100 py-2 shadow-lg  text-black text-center ">Contact Page</div>
+ text-2xl bg-white-100 py-2 shadow-lg  text-blue-500 text-center ">Contact Page</div>
       <div className="flex ">
         <div
           className={`bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)]  border-#ccc-1px sidebar   p-5 pt-8 ${
