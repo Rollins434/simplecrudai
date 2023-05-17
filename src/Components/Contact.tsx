@@ -17,7 +17,7 @@ const Contact = () => {
   const personData = useAppSelector((state) => state.person.persons);
 
   return (
-    <div className="w-[600px] mx-auto content-center ">
+    <div className="w-[100%] content-center ">
       <div className="text-1xl flex flex-col gap-10  items-center ">
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 max-w-sm"

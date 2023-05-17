@@ -8,13 +8,11 @@ type listData = {
 };
 const List = (props: listData) => {
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
+
   const handleDelete = (id: any) => {
     dispatch(deltePerson(id));
   };
-  const handleEdit = (id: any) => {
-    navigate(`/edit/${id}`);
-  };
+
   return (
     <>
       <div className="flex flex-wrap gap-5 ">

@@ -40,7 +40,7 @@ const Create = () => {
   };
 
   return (
-    <div className="w-[500px] mx-auto items-center ">
+    <div className=" items-center ">
       <div className="text-1xl flex flex-col gap-10 justify-center ">
         <div className="px-6 pt-8 pb-2 mt-14 border">
           <form onSubmit={submitForm}>

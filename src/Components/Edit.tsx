@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../source/store";
-import { addPerson, updatePerson } from "../source/features/personSlice";
+import {  updatePerson } from "../source/features/personSlice";
 import { useNavigate, useParams } from "react-router-dom";
 
 // type Props ={
@@ -32,14 +32,14 @@ const Edit = () => {
     navigate("/contact");
   };
 
-//   useEffect(() => {
-//     const res = personData.find((data) => data.id == id);
+  useEffect(() => {
+    const res = personData.find((data) => data.id == id);
  
-//     if (res) {
-//       setFname(res.firstName);
-//       setLname(res.lastName);
-//     }
-//   }, [id,submitForm]);
+    if (res) {
+      setFname(res.firstName);
+      setLname(res.lastName);
+    }
+  }, [id,dispatch]);
 
 
 

@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction, current } from "@reduxjs/toolkit";
 
 export interface IPerson {
   id: any;
@@ -41,23 +41,26 @@ export const PersonSlice = createSlice({
         return data.id !== action.payload;
       });
     },
-    updatePerson: (state,  action: PayloadAction<{
+    updatePerson: (
+      state,
+      action: PayloadAction<{
         id: any;
         fname: string;
         lname: string;
         status: boolean;
-      }>) => {
-      state.persons = state.persons.filter((data) => {
-        console.log(data)
-        return data.id == action.payload.id ? action.payload : data;
+      }>
+    ) => {
+      state.persons.map((user) => {
+        if (user.id == action.payload.id) {
+          user.firstName = action.payload.fname;
+          user.id = action.payload.id;
+          user.lastName = action.payload.lname;
+          user.status = action.payload.status;
+        }
       });
     },
-    // getPerson: (state, action) => {
-    // state.persons = state.persons.find((item) => return { item.id == action.payload});
-     
-    // },
   },
 });
 
 export default PersonSlice.reducer;
-export const { addPerson, deltePerson, updatePerson,  } = PersonSlice.actions;
+export const { addPerson, deltePerson, updatePerson } = PersonSlice.actions;
